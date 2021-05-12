@@ -2,7 +2,9 @@
 
 > Typescript Node server template using [fastify](https://www.fastify.io/), [mongoose](https://mongoosejs.com/), [ava](https://avajs.dev/), [graphql](https://graphql.org/), [mercurius](https://mercurius.dev/#/), [graphql-compose](https://graphql-compose.github.io/),  [eslint](https://eslint.org/), [Sentry](https://sentry.io/welcome/), [nodemon](https://nodemon.io/), code coverage and other stuff
 
+[![build](https://img.shields.io/github/workflow/status/tasoskakour/node-typescript-server-template/ci?style=flat&logo=github&label=)](https://github.com/tasoskakour/node-typescript-server-template/actions) [![style](https://img.shields.io/badge/tasoskakour.com-blueviolet.svg?style=flat)](https://tasoskakour.com)
 
+ 
 ## Use this template
 
 - Update [`package.json`](./package.json) with your info.
