@@ -2,7 +2,7 @@
 	"name": "node-typescript-server-template",
 	"version": "0.0.0",
 	"private": true,
-	"description": "CHANGE ME",
+	"description": "Typescript Node server template using various stuff",
 	"keywords": [
 		"nodets",
 		"template",
@@ -33,7 +33,8 @@
 		"dev": "nodemon --config nodemon.json server.ts",
 		"lint": "eslint . --cache",
 		"start": "cross-env NODE_ENV=production ts-node server.ts",
-		"test": "npm run lint && npm run ava"
+		"test": "yarn ava",
+		"prepare": "husky install"
 	},
 	"ava": {
 		"verbose": true
@@ -74,10 +75,15 @@
 		"eslint-plugin-prettier": "^3.4.0",
 		"eslint-plugin-unicorn": "^31.0.0",
 		"got": "^11.8.2",
+		"husky": ">=6",
+		"lint-staged": ">=11",
 		"nodemon": "^2.0.7",
 		"prettier": "^2.2.1",
 		"ts-node": "^9.1.1",
 		"typescript": "^4.2.4"
+	},
+	"lint-staged": {
+		"*.{js,ts}": "eslint --cache --fix"
 	},
 	"engines": {
 		"node": ">=14"
