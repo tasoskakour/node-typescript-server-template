@@ -5,12 +5,13 @@ import { IAuth, IGraphQLContext, IJWTDecoded } from '../../types';
 const verifyToken = (token: string) => {
     return new Promise<IAuth>((resolve, reject) => {
         if (!token || typeof token !== 'string' || token.trim().length === 0) {
-            return reject();
+            reject();
+            return;
         }
 
         const tokenString = token.startsWith('Bearer ') ? token.slice(7, token.length) : token;
 
-        return jwt.verify(tokenString, process.env.JWT_SECRET, (error, decoded: IJWTDecoded) => {
+        jwt.verify(tokenString, process.env.JWT_SECRET, (error, decoded: IJWTDecoded) => {
             if (error) {
                 return reject();
             }

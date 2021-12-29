@@ -7,7 +7,7 @@ import { schema } from '../graphql';
 const graphql: FastifyPluginCallback = (fastify, _, done) => {
     fastify.register(mercurius, {
         schema,
-        graphiql: process.env.NODE_ENV === 'production' ? false : 'playground',
+        graphiql: process.env.NODE_ENV === 'development',
     });
 
     done();

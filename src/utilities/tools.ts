@@ -7,7 +7,7 @@ import { IGraphQLContext } from '../types';
  */
 export const requireMiddlewares = (
     middlewares: Array<ResolverMiddleware<unknown, IGraphQLContext>> = [],
-    resolvers: ObjMap<Resolver>
+    resolvers: ObjMap<Resolver> = {}
 ): ObjMap<Resolver> => {
     const ks = Object.keys(resolvers);
 
